@@ -1,0 +1,6 @@
+framework module DynamicMaskingLibrary {
+  umbrella header "DynamicMaskingLibrary-umbrella.h"
+
+  export *
+  module * { export * }
+}

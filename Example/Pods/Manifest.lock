@@ -1,0 +1,16 @@
+PODS:
+  - DynamicMaskingLibrary (0.1.0)
+
+DEPENDENCIES:
+  - DynamicMaskingLibrary (from `../`)
+
+EXTERNAL SOURCES:
+  DynamicMaskingLibrary:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DynamicMaskingLibrary: 450126929215a642bc2b54bdaa78c23fa0a1e024
+
+PODFILE CHECKSUM: 1909b83b1c4803968592bb009281a0a861633f70
+
+COCOAPODS: 1.11.2

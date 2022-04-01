@@ -1,0 +1,6 @@
+framework module Pods_DynamicMaskingLibrary_Tests {
+  umbrella header "Pods-DynamicMaskingLibrary_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
