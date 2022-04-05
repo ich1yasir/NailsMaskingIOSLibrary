@@ -32,16 +32,18 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'DynamicMaskingLibrary/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'DynamicMaskingLibrary' => ['DynamicMaskingLibrary/Assets/*.png']
-  # }
+  s.resource_bundles = {
+    'DynamicMaskingLibrary' => 'DynamicMaskingLibrary/Assets/**/*'
+  }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+  s.public_header_files = 'DynamicMaskingLibrary/Classes/**/*.h'
   s.frameworks = 'UIKit'
   
   # Ref: https://github.com/CocoaPods/CocoaPods/issues/7234
   s.static_framework = true
   
   # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'TensorFlowLiteSwift', '2.7.0'
+  s.dependency 'TensorFlowLiteSwift/CoreML', '2.7.0'
   s.dependency 'OpenCV', '~> 4.3.0'
 end
