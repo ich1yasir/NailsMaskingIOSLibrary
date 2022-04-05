@@ -10,6 +10,9 @@
 #endif
 #endif
 
+#import "ImageProcessing.h"
+#import "models.h"
+#import "SAMCubicSpline.h"
 
 FOUNDATION_EXPORT double DynamicMaskingLibraryVersionNumber;
 FOUNDATION_EXPORT const unsigned char DynamicMaskingLibraryVersionString[];

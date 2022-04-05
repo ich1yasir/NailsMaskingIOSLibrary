@@ -1,16 +1,41 @@
 PODS:
-  - DynamicMaskingLibrary (0.1.0)
+  - DynamicMaskingLibrary (0.1.0):
+    - OpenCV (~> 4.3.0)
+    - TensorFlowLiteSwift (= 2.7.0)
+    - TensorFlowLiteSwift/CoreML (= 2.7.0)
+  - OpenCV (4.3.0)
+  - TensorFlowLiteC (2.7.0):
+    - TensorFlowLiteC/Core (= 2.7.0)
+  - TensorFlowLiteC/Core (2.7.0)
+  - TensorFlowLiteC/CoreML (2.7.0):
+    - TensorFlowLiteC/Core
+  - TensorFlowLiteSwift (2.7.0):
+    - TensorFlowLiteSwift/Core (= 2.7.0)
+  - TensorFlowLiteSwift/Core (2.7.0):
+    - TensorFlowLiteC (= 2.7.0)
+  - TensorFlowLiteSwift/CoreML (2.7.0):
+    - TensorFlowLiteC/CoreML (= 2.7.0)
+    - TensorFlowLiteSwift/Core (= 2.7.0)
 
 DEPENDENCIES:
   - DynamicMaskingLibrary (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - OpenCV
+    - TensorFlowLiteC
+    - TensorFlowLiteSwift
 
 EXTERNAL SOURCES:
   DynamicMaskingLibrary:
     :path: "../"
 
 SPEC CHECKSUMS:
-  DynamicMaskingLibrary: 450126929215a642bc2b54bdaa78c23fa0a1e024
+  DynamicMaskingLibrary: 54193013e03c0dd828788f8e133d79d287bc3d40
+  OpenCV: 681e0451c1e54c5930a8922277f817ed5d5ab459
+  TensorFlowLiteC: 50d75ed3640c15dcfbaf88ca4326297b445e00a1
+  TensorFlowLiteSwift: fe99748dc3d58ae08bd2ff38658e3ade7038670f
 
 PODFILE CHECKSUM: 1909b83b1c4803968592bb009281a0a861633f70
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.3

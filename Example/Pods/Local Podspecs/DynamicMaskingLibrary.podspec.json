@@ -18,5 +18,22 @@
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "DynamicMaskingLibrary/Classes/**/*"
+  "source_files": "DynamicMaskingLibrary/Classes/**/*",
+  "resource_bundles": {
+    "DynamicMaskingLibrary": "DynamicMaskingLibrary/Assets/**/*"
+  },
+  "public_header_files": "DynamicMaskingLibrary/Classes/**/*.h",
+  "frameworks": "UIKit",
+  "static_framework": true,
+  "dependencies": {
+    "TensorFlowLiteSwift": [
+      "2.7.0"
+    ],
+    "TensorFlowLiteSwift/CoreML": [
+      "2.7.0"
+    ],
+    "OpenCV": [
+      "~> 4.3.0"
+    ]
+  }
 }

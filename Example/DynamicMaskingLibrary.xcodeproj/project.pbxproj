@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A66B0EE176945061BA53342 /* Pods_DynamicMaskingLibrary_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA525B2F94C087AB94B7DD9 /* Pods_DynamicMaskingLibrary_Tests.framework */; };
-		5017D2B96EBDE182CEBE047C /* Pods_DynamicMaskingLibrary_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3FDCE7EA8836E60032E3EC /* Pods_DynamicMaskingLibrary_Example.framework */; };
+		5968235027FB48BE0078CA91 /* dcp_8-keypoints_1.0.2.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 5968234E27FB48BE0078CA91 /* dcp_8-keypoints_1.0.2.tflite */; };
+		5968235127FB48BE0078CA91 /* ssd_mobilenet_v3_nails_quant.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 5968234F27FB48BE0078CA91 /* ssd_mobilenet_v3_nails_quant.tflite */; };
+		5968235327FB49440078CA91 /* labelmap.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5968235227FB49440078CA91 /* labelmap.txt */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		BCE4B1020C6F11D9F08C3038 /* Pods_DynamicMaskingLibrary_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4962900FE476851215487EC /* Pods_DynamicMaskingLibrary_Tests.framework */; };
+		C427CF6B0246CFEB6AA48FC5 /* Pods_DynamicMaskingLibrary_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DF90F7C4740336B17ABC7E6 /* Pods_DynamicMaskingLibrary_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,10 +31,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0E5FAB0FFDC2092A21059D7F /* Pods-DynamicMaskingLibrary_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamicMaskingLibrary_Tests.debug.xcconfig"; path = "Target Support Files/Pods-DynamicMaskingLibrary_Tests/Pods-DynamicMaskingLibrary_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		1C9E0ADD02357BD4B7DC07EF /* Pods-DynamicMaskingLibrary_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamicMaskingLibrary_Example.debug.xcconfig"; path = "Target Support Files/Pods-DynamicMaskingLibrary_Example/Pods-DynamicMaskingLibrary_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		3CA525B2F94C087AB94B7DD9 /* Pods_DynamicMaskingLibrary_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DynamicMaskingLibrary_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DF90F7C4740336B17ABC7E6 /* Pods_DynamicMaskingLibrary_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DynamicMaskingLibrary_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E690D97DB334734C463DE00 /* Pods-DynamicMaskingLibrary_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamicMaskingLibrary_Example.debug.xcconfig"; path = "Target Support Files/Pods-DynamicMaskingLibrary_Example/Pods-DynamicMaskingLibrary_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		54C83013B06633CFC9E8B9D9 /* DynamicMaskingLibrary.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DynamicMaskingLibrary.podspec; path = ../DynamicMaskingLibrary.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		5968234E27FB48BE0078CA91 /* dcp_8-keypoints_1.0.2.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; name = "dcp_8-keypoints_1.0.2.tflite"; path = "../../DynamicMaskingLibrary/Assets/Tflite/dcp_8-keypoints_1.0.2.tflite"; sourceTree = "<group>"; };
+		5968234F27FB48BE0078CA91 /* ssd_mobilenet_v3_nails_quant.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; name = ssd_mobilenet_v3_nails_quant.tflite; path = ../../DynamicMaskingLibrary/Assets/Tflite/ssd_mobilenet_v3_nails_quant.tflite; sourceTree = "<group>"; };
+		5968235227FB49440078CA91 /* labelmap.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = labelmap.txt; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* DynamicMaskingLibrary_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicMaskingLibrary_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,10 +47,11 @@
 		607FACE51AFB9204008FA782 /* DynamicMaskingLibrary_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicMaskingLibrary_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		6F598CEC789FFFE5AAE9A9C6 /* Pods-DynamicMaskingLibrary_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamicMaskingLibrary_Example.release.xcconfig"; path = "Target Support Files/Pods-DynamicMaskingLibrary_Example/Pods-DynamicMaskingLibrary_Example.release.xcconfig"; sourceTree = "<group>"; };
-		7F502C222D9FC47BCE7B8E84 /* Pods-DynamicMaskingLibrary_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamicMaskingLibrary_Tests.release.xcconfig"; path = "Target Support Files/Pods-DynamicMaskingLibrary_Tests/Pods-DynamicMaskingLibrary_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		9E3FDCE7EA8836E60032E3EC /* Pods_DynamicMaskingLibrary_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DynamicMaskingLibrary_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65C5F381D5338D3BF3481EB2 /* Pods-DynamicMaskingLibrary_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamicMaskingLibrary_Example.release.xcconfig"; path = "Target Support Files/Pods-DynamicMaskingLibrary_Example/Pods-DynamicMaskingLibrary_Example.release.xcconfig"; sourceTree = "<group>"; };
+		911FF98FBB31680831C56056 /* Pods-DynamicMaskingLibrary_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamicMaskingLibrary_Tests.release.xcconfig"; path = "Target Support Files/Pods-DynamicMaskingLibrary_Tests/Pods-DynamicMaskingLibrary_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		A4962900FE476851215487EC /* Pods_DynamicMaskingLibrary_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DynamicMaskingLibrary_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADD9F0AC518592B186D7EF7F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		F979C60A6862EBF63D09C7CE /* Pods-DynamicMaskingLibrary_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamicMaskingLibrary_Tests.debug.xcconfig"; path = "Target Support Files/Pods-DynamicMaskingLibrary_Tests/Pods-DynamicMaskingLibrary_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		FEF1409A309364356EB8AA3B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,7 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5017D2B96EBDE182CEBE047C /* Pods_DynamicMaskingLibrary_Example.framework in Frameworks */,
+				C427CF6B0246CFEB6AA48FC5 /* Pods_DynamicMaskingLibrary_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,20 +68,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A66B0EE176945061BA53342 /* Pods_DynamicMaskingLibrary_Tests.framework in Frameworks */,
+				BCE4B1020C6F11D9F08C3038 /* Pods_DynamicMaskingLibrary_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0960A1A9340CD52BF4CE9045 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2DF90F7C4740336B17ABC7E6 /* Pods_DynamicMaskingLibrary_Example.framework */,
+				A4962900FE476851215487EC /* Pods_DynamicMaskingLibrary_Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5968234D27FB489B0078CA91 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				5968235227FB49440078CA91 /* labelmap.txt */,
+				5968234E27FB48BE0078CA91 /* dcp_8-keypoints_1.0.2.tflite */,
+				5968234F27FB48BE0078CA91 /* ssd_mobilenet_v3_nails_quant.tflite */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		59BABB5F366AEDE6E96DDA9A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1C9E0ADD02357BD4B7DC07EF /* Pods-DynamicMaskingLibrary_Example.debug.xcconfig */,
-				6F598CEC789FFFE5AAE9A9C6 /* Pods-DynamicMaskingLibrary_Example.release.xcconfig */,
-				0E5FAB0FFDC2092A21059D7F /* Pods-DynamicMaskingLibrary_Tests.debug.xcconfig */,
-				7F502C222D9FC47BCE7B8E84 /* Pods-DynamicMaskingLibrary_Tests.release.xcconfig */,
+				4E690D97DB334734C463DE00 /* Pods-DynamicMaskingLibrary_Example.debug.xcconfig */,
+				65C5F381D5338D3BF3481EB2 /* Pods-DynamicMaskingLibrary_Example.release.xcconfig */,
+				F979C60A6862EBF63D09C7CE /* Pods-DynamicMaskingLibrary_Tests.debug.xcconfig */,
+				911FF98FBB31680831C56056 /* Pods-DynamicMaskingLibrary_Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -83,12 +108,13 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				5968234D27FB489B0078CA91 /* model */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for DynamicMaskingLibrary */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				59BABB5F366AEDE6E96DDA9A /* Pods */,
-				DC171BCCF5E451A0B8D30C21 /* Frameworks */,
+				0960A1A9340CD52BF4CE9045 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,15 +176,6 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		DC171BCCF5E451A0B8D30C21 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				9E3FDCE7EA8836E60032E3EC /* Pods_DynamicMaskingLibrary_Example.framework */,
-				3CA525B2F94C087AB94B7DD9 /* Pods_DynamicMaskingLibrary_Tests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -166,11 +183,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "DynamicMaskingLibrary_Example" */;
 			buildPhases = (
-				36BBA4C464170542F5FC8AF4 /* [CP] Check Pods Manifest.lock */,
+				AE9670A058621F20A63099B1 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				0DD643E9817EE5DAD4B9F9CB /* [CP] Embed Pods Frameworks */,
+				F4013D9724A393599FD2679B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -185,7 +202,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "DynamicMaskingLibrary_Tests" */;
 			buildPhases = (
-				DDFC80FE4639AAD036AB6CE8 /* [CP] Check Pods Manifest.lock */,
+				9604EFB8640E1B763ED667EB /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
@@ -249,8 +266,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5968235327FB49440078CA91 /* labelmap.txt in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				5968235027FB48BE0078CA91 /* dcp_8-keypoints_1.0.2.tflite in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				5968235127FB48BE0078CA91 /* ssd_mobilenet_v3_nails_quant.tflite in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,25 +285,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0DD643E9817EE5DAD4B9F9CB /* [CP] Embed Pods Frameworks */ = {
+		9604EFB8640E1B763ED667EB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DynamicMaskingLibrary_Example/Pods-DynamicMaskingLibrary_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/DynamicMaskingLibrary/DynamicMaskingLibrary.framework",
+			inputFileListPaths = (
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicMaskingLibrary.framework",
+				"$(DERIVED_FILE_DIR)/Pods-DynamicMaskingLibrary_Tests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DynamicMaskingLibrary_Example/Pods-DynamicMaskingLibrary_Example-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		36BBA4C464170542F5FC8AF4 /* [CP] Check Pods Manifest.lock */ = {
+		AE9670A058621F20A63099B1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -305,26 +329,22 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DDFC80FE4639AAD036AB6CE8 /* [CP] Check Pods Manifest.lock */ = {
+		F4013D9724A393599FD2679B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
+				"${PODS_ROOT}/Target Support Files/Pods-DynamicMaskingLibrary_Example/Pods-DynamicMaskingLibrary_Example-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/DynamicMaskingLibrary/DynamicMaskingLibrary.bundle",
 			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DynamicMaskingLibrary_Tests-checkManifestLockResult.txt",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DynamicMaskingLibrary.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DynamicMaskingLibrary_Example/Pods-DynamicMaskingLibrary_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -405,6 +425,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = UF69DT97L8;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -459,6 +480,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = UF69DT97L8;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -480,7 +502,7 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C9E0ADD02357BD4B7DC07EF /* Pods-DynamicMaskingLibrary_Example.debug.xcconfig */;
+			baseConfigurationReference = 4E690D97DB334734C463DE00 /* Pods-DynamicMaskingLibrary_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -500,7 +522,7 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6F598CEC789FFFE5AAE9A9C6 /* Pods-DynamicMaskingLibrary_Example.release.xcconfig */;
+			baseConfigurationReference = 65C5F381D5338D3BF3481EB2 /* Pods-DynamicMaskingLibrary_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -520,7 +542,7 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0E5FAB0FFDC2092A21059D7F /* Pods-DynamicMaskingLibrary_Tests.debug.xcconfig */;
+			baseConfigurationReference = F979C60A6862EBF63D09C7CE /* Pods-DynamicMaskingLibrary_Tests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 26AZNHAGBC;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -543,7 +565,7 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7F502C222D9FC47BCE7B8E84 /* Pods-DynamicMaskingLibrary_Tests.release.xcconfig */;
+			baseConfigurationReference = 911FF98FBB31680831C56056 /* Pods-DynamicMaskingLibrary_Tests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 26AZNHAGBC;
 				FRAMEWORK_SEARCH_PATHS = (
