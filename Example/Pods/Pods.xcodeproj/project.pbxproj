@@ -41,7 +41,10 @@
 		40FCAC3CF672BD5F31D8CE92834B4479 /* SSDDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177A9B8FAFBE0BC8460E11A3AD40F855 /* SSDDataHandler.swift */; };
 		4936D1D9270DE8BE31219D1ED006D8D2 /* SAMCubicSpline.h in Headers */ = {isa = PBXBuildFile; fileRef = 7844802110592FFE9E6ED0EE4A0FD4C7 /* SAMCubicSpline.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55EC3D17C08187A9C64DEE0D923FAC5A /* Pods-DynamicMaskingLibrary_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F24DED8243651050DEE6527AAC46224D /* Pods-DynamicMaskingLibrary_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5968234C27FB47F10078CA91 /* Tflite in Resources */ = {isa = PBXBuildFile; fileRef = D404851A3410DE107BEDFCE054D4DBAF /* Tflite */; };
+		598CBFE127FCFF2E00527975 /* labelmap.txt in Resources */ = {isa = PBXBuildFile; fileRef = 598CBFDE27FCFF2E00527975 /* labelmap.txt */; };
+		598CBFE227FCFF2E00527975 /* ssd_mobilenet_v3_nails_quant.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 598CBFDF27FCFF2E00527975 /* ssd_mobilenet_v3_nails_quant.tflite */; };
+		598CBFE327FCFF2E00527975 /* dcp_8-keypoints_1.0.2.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 598CBFE027FCFF2E00527975 /* dcp_8-keypoints_1.0.2.tflite */; };
+		598CBFE527FDCE0A00527975 /* ModelBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598CBFE427FDCE0A00527975 /* ModelBundle.swift */; };
 		5C9FBC03F01DDEF7787B05D40D0412CD /* PrimitiveExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE6816611CB1DD868E47C5FE02DD93 /* PrimitiveExtension.swift */; };
 		5F1A2F8B752530727923151E4D7D5EE1 /* ModelInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2896035967A58F520D4D08C33CDDC9CA /* ModelInfo.swift */; };
 		622431DB0977C0B920DCFD00D99524C7 /* ImageProcessing.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DE57AF3FF23FF966F67FAA229E67C2 /* ImageProcessing.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -55,7 +58,6 @@
 		8DDCE4BB32230F06C9C95ADAAE3B5469 /* DCPModelDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC91D0736B13FEB6EC38BC9314007EC /* DCPModelDataHandler.swift */; };
 		9B1686809745117C611BDA75BA983A92 /* QuantizationParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061167243056CFD200D6155EF7B6ADF0 /* QuantizationParameters.swift */; };
 		A240BE8CB59276DCE1E457A3926159E5 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B027FE51CF9FD51EE99E5149B8EAD5 /* Model.swift */; };
-		A3665CE30CB5F1D92599332EE5D9CA70 /* Tflite in Resources */ = {isa = PBXBuildFile; fileRef = D404851A3410DE107BEDFCE054D4DBAF /* Tflite */; };
 		A77A1CE569FE7A18D8854DB6B134757F /* models.h in Headers */ = {isa = PBXBuildFile; fileRef = E7261A089F1B832ED22DDCD3D3A5D73B /* models.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AE783841E37F96D2D49819CA661ED303 /* TensorFlowLiteSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F8D8A887E653D10337355D718258EFE /* TensorFlowLiteSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B99BF82BA21DB464B365D32486D700D6 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B36D3A6C8910933C09AF5C00B55B9D /* Delegate.swift */; };
@@ -251,6 +253,10 @@
 		57C4455279DC7F66C83CE66E0011E486 /* constants_c.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = constants_c.h; path = opencv2.framework/Versions/A/Headers/imgcodecs/legacy/constants_c.h; sourceTree = "<group>"; };
 		58891DB4355602400FE9CEA16D0B41B6 /* mat.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = mat.hpp; path = opencv2.framework/Versions/A/Headers/gapi/own/mat.hpp; sourceTree = "<group>"; };
 		593875BD12C19914CBE96742C2A8BA57 /* DynamicMaskingLibrary.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DynamicMaskingLibrary.modulemap; sourceTree = "<group>"; };
+		598CBFDE27FCFF2E00527975 /* labelmap.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = labelmap.txt; path = ../labelmap.txt; sourceTree = "<group>"; };
+		598CBFDF27FCFF2E00527975 /* ssd_mobilenet_v3_nails_quant.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; name = ssd_mobilenet_v3_nails_quant.tflite; path = ../ssd_mobilenet_v3_nails_quant.tflite; sourceTree = "<group>"; };
+		598CBFE027FCFF2E00527975 /* dcp_8-keypoints_1.0.2.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; name = "dcp_8-keypoints_1.0.2.tflite"; path = "../dcp_8-keypoints_1.0.2.tflite"; sourceTree = "<group>"; };
+		598CBFE427FDCE0A00527975 /* ModelBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelBundle.swift; sourceTree = "<group>"; };
 		5AE921758AA968E2B51557047D29F087 /* ResourceBundle-DynamicMaskingLibrary-DynamicMaskingLibrary-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-DynamicMaskingLibrary-DynamicMaskingLibrary-Info.plist"; sourceTree = "<group>"; };
 		5B6A082CE89030E1033F19A1BF628672 /* gopaque.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = gopaque.hpp; path = opencv2.framework/Versions/A/Headers/gapi/gopaque.hpp; sourceTree = "<group>"; };
 		5BB5EFAC80A8F44ADCC0CDA1F977E966 /* kmeans_index.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = kmeans_index.h; path = opencv2.framework/Versions/A/Headers/flann/kmeans_index.h; sourceTree = "<group>"; };
@@ -412,7 +418,6 @@
 		D0EE5D7E844269C76C49EBBDF9BBD158 /* OpenCV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OpenCV.debug.xcconfig; sourceTree = "<group>"; };
 		D39D5046A587F802448F12C8BCFA5DDE /* features2d.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = features2d.hpp; path = opencv2.framework/Versions/A/Headers/features2d.hpp; sourceTree = "<group>"; };
 		D39E69E87ABBDB7F28CD6C49690EFBEC /* gapi.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = gapi.hpp; path = opencv2.framework/Versions/A/Headers/gapi.hpp; sourceTree = "<group>"; };
-		D404851A3410DE107BEDFCE054D4DBAF /* Tflite */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = Tflite; path = DynamicMaskingLibrary/Assets/Tflite; sourceTree = "<group>"; };
 		D41BB57B83D817BD6081D9201278A3F1 /* Pods-DynamicMaskingLibrary_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DynamicMaskingLibrary_Tests-dummy.m"; sourceTree = "<group>"; };
 		D4295455A5788D9EFDF5B68027BE0AC2 /* photo.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = photo.hpp; path = opencv2.framework/Versions/A/Headers/photo/photo.hpp; sourceTree = "<group>"; };
 		D4815F2A16E35FB7DA0C4F14F3644F1A /* util_inl.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = util_inl.hpp; path = opencv2.framework/Versions/A/Headers/stitching/detail/util_inl.hpp; sourceTree = "<group>"; };
@@ -733,6 +738,7 @@
 				2896035967A58F520D4D08C33CDDC9CA /* ModelInfo.swift */,
 				177A9B8FAFBE0BC8460E11A3AD40F855 /* SSDDataHandler.swift */,
 				2621FA392239C61292E5C00AC643FFD7 /* Extension */,
+				598CBFE427FDCE0A00527975 /* ModelBundle.swift */,
 			);
 			name = ModelHandler;
 			path = DynamicMaskingLibrary/Classes/ModelHandler;
@@ -1098,6 +1104,9 @@
 		D8C73F6511FA9011EBD7AF104E3A9BB3 /* Tflite */ = {
 			isa = PBXGroup;
 			children = (
+				598CBFE027FCFF2E00527975 /* dcp_8-keypoints_1.0.2.tflite */,
+				598CBFDE27FCFF2E00527975 /* labelmap.txt */,
+				598CBFDF27FCFF2E00527975 /* ssd_mobilenet_v3_nails_quant.tflite */,
 			);
 			name = Tflite;
 			path = DynamicMaskingLibrary/Assets/Tflite;
@@ -1117,7 +1126,6 @@
 			isa = PBXGroup;
 			children = (
 				5C07FC202669D1368E93DC196B47CB21 /* Images */,
-				D404851A3410DE107BEDFCE054D4DBAF /* Tflite */,
 				4934CEBAD9C601FDFC6BF6E5A3AC9715 /* ImageHandler */,
 				A131821E23061719CAFF1498850EFDB6 /* ModelHandler */,
 				DB84698637EFBF5723EB2A40285C9438 /* Pod */,
@@ -1327,7 +1335,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5968234C27FB47F10078CA91 /* Tflite in Resources */,
+				598CBFE127FCFF2E00527975 /* labelmap.txt in Resources */,
+				598CBFE227FCFF2E00527975 /* ssd_mobilenet_v3_nails_quant.tflite in Resources */,
+				598CBFE327FCFF2E00527975 /* dcp_8-keypoints_1.0.2.tflite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1336,7 +1346,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDCEC39D9F136D6143B9F65063FDCED8 /* Images in Resources */,
-				A3665CE30CB5F1D92599332EE5D9CA70 /* Tflite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1376,6 +1385,7 @@
 				0CE6807EA83DCBFD85A6DFFDDDC693E7 /* ImageProcessing.mm in Sources */,
 				5F1A2F8B752530727923151E4D7D5EE1 /* ModelInfo.swift in Sources */,
 				3B11F22198D9FEA306839FA560650AD2 /* models.m in Sources */,
+				598CBFE527FDCE0A00527975 /* ModelBundle.swift in Sources */,
 				5C9FBC03F01DDEF7787B05D40D0412CD /* PrimitiveExtension.swift in Sources */,
 				CE0D2E52AA7FC8050F1BDD26D2064B30 /* SAMCubicSpline.m in Sources */,
 				40FCAC3CF672BD5F31D8CE92834B4479 /* SSDDataHandler.swift in Sources */,
