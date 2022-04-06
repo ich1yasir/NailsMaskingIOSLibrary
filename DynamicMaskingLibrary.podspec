@@ -35,9 +35,21 @@ TODO: Add long description of the pod here.
   s.resource_bundles = {
     'DynamicMaskingLibrary' => 'DynamicMaskingLibrary/Assets/**/*'
   }
+#  s.source_files = 'XDCoreLib/Pod/Classes/**/*'
+#  s.resource_bundles = { 'XDCoreLib' => ['XDCoreLib/Pod/Resources/**/*.{png,storyboard}'] }
+  
+#  s.resource_bundles = {
+#  ‘MyPodName’ => [‘MyPodName/Classes/**/*.js’]
+#  }
 
+s.resource_bundles = {
+    'DynamicMaskingLibrary' => ['DynamicMaskingLibrary/Assets/**/*]
+}
+
+  
   s.public_header_files = 'DynamicMaskingLibrary/Classes/**/*.h'
   s.frameworks = 'UIKit'
+  
   
   # Ref: https://github.com/CocoaPods/CocoaPods/issues/7234
   s.static_framework = true

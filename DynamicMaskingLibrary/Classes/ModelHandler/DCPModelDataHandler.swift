@@ -69,14 +69,21 @@ class DCPModelDataHandler {
   init?(modelFileInfo: FileInfo, threadCount: Int = 4) {
     let modelFilename = modelFileInfo.name
 
+      guard let modelPath = ModelBundleClass.resourceBundle.path(
+        forResource: modelFilename,
+        ofType: modelFileInfo.extension
+      ) else {
+          print("Failed to load the model file with name: \(modelFilename).")
+          return nil
+        }
     // Construct the path to the model file.
-    guard let modelPath = Bundle.main.path(
-      forResource: modelFilename,
-      ofType: modelFileInfo.extension
-    ) else {
-      print("Failed to load the model file with name: \(modelFilename).")
-      return nil
-    }
+//    guard let modelPath = Bundle.main.path(
+//      forResource: modelFilename,
+//      ofType: modelFileInfo.extension
+//    ) else {
+//      print("Failed to load the model file with name: \(modelFilename).")
+//      return nil
+//    }
     
     var optionsDel = CoreMLDelegate.Options()
     optionsDel.enabledDevices = .all

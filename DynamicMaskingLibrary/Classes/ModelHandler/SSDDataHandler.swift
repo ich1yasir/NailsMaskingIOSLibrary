@@ -33,7 +33,7 @@ class SSDDataHandler: NSObject {
     let imageStd:  Float = 127.5
 
     // MARK: Private properties
-    private var labels: [String] = []
+    private var labels: [String] = ["???", "nail"]
 
     /// TensorFlow Lite `Interpreter` object for performing inference on a given model.
     private var interpreter: Interpreter
@@ -52,14 +52,23 @@ class SSDDataHandler: NSObject {
     init?(modelFileInfo: FileInfo, labelsFileInfo: FileInfo, threadCount: Int = 1) {
       let modelFilename = modelFileInfo.name
       let modelExt = modelFileInfo.extension
+        
+      
+        guard let modelPath = ModelBundleClass.resourceBundle.path(
+          forResource: modelFilename,
+          ofType: modelExt
+        ) else {
+            print("Failed to load the model file with name: \(modelFilename).")
+            return nil
+          }
       // Construct the path to the nail model file.
-      guard let modelPath = Bundle.main.path(
-        forResource: modelFilename,
-        ofType: modelExt
-      ) else {
-        print("Failed to load the model file with name: \(modelFilename).")
-        return nil
-      }
+//      guard let modelPath = Bundle.main.path(
+//        forResource: modelFilename,
+//        ofType: modelExt
+//      ) else {
+//        print("Failed to load the model file with name: \(modelFilename).")
+//        return nil
+//      }
       var optionsDel = CoreMLDelegate.Options()
       optionsDel.enabledDevices = .all
       let coreMLDelegate = CoreMLDelegate(options: optionsDel)!
@@ -83,7 +92,7 @@ class SSDDataHandler: NSObject {
       super.init()
 
       // Load the classes listed in the labels file.
-      loadLabels(fileInfo: labelsFileInfo)
+      // loadLabels(fileInfo: labelsFileInfo)
     }
     
     
@@ -195,9 +204,14 @@ class SSDDataHandler: NSObject {
     private func loadLabels(fileInfo: FileInfo) {
       let filename = fileInfo.name
       let fileExtension = fileInfo.extension
-      guard let fileURL = Bundle.main.url(forResource: filename, withExtension: fileExtension) else {
-        fatalError("Labels file not found in bundle. Please add a labels file with name " +
-                     "\(filename).\(fileExtension) and try again.")
+        
+      guard let fileURL = ModelBundleClass.resourceBundle.url(
+          forResource: filename,
+          withExtension: fileExtension
+      )
+      else {
+          fatalError("Labels file not found in bundle. Please add a labels file with name " +
+                       "\(filename).\(fileExtension) and try again.")
       }
       do {
         let contents = try String(contentsOf: fileURL, encoding: .utf8)

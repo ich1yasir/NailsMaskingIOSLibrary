@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5968235027FB48BE0078CA91 /* dcp_8-keypoints_1.0.2.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 5968234E27FB48BE0078CA91 /* dcp_8-keypoints_1.0.2.tflite */; };
-		5968235127FB48BE0078CA91 /* ssd_mobilenet_v3_nails_quant.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 5968234F27FB48BE0078CA91 /* ssd_mobilenet_v3_nails_quant.tflite */; };
-		5968235327FB49440078CA91 /* labelmap.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5968235227FB49440078CA91 /* labelmap.txt */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -34,9 +31,6 @@
 		2DF90F7C4740336B17ABC7E6 /* Pods_DynamicMaskingLibrary_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DynamicMaskingLibrary_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E690D97DB334734C463DE00 /* Pods-DynamicMaskingLibrary_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamicMaskingLibrary_Example.debug.xcconfig"; path = "Target Support Files/Pods-DynamicMaskingLibrary_Example/Pods-DynamicMaskingLibrary_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		54C83013B06633CFC9E8B9D9 /* DynamicMaskingLibrary.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DynamicMaskingLibrary.podspec; path = ../DynamicMaskingLibrary.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		5968234E27FB48BE0078CA91 /* dcp_8-keypoints_1.0.2.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; name = "dcp_8-keypoints_1.0.2.tflite"; path = "../../DynamicMaskingLibrary/Assets/Tflite/dcp_8-keypoints_1.0.2.tflite"; sourceTree = "<group>"; };
-		5968234F27FB48BE0078CA91 /* ssd_mobilenet_v3_nails_quant.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; name = ssd_mobilenet_v3_nails_quant.tflite; path = ../../DynamicMaskingLibrary/Assets/Tflite/ssd_mobilenet_v3_nails_quant.tflite; sourceTree = "<group>"; };
-		5968235227FB49440078CA91 /* labelmap.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = labelmap.txt; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* DynamicMaskingLibrary_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicMaskingLibrary_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,16 +78,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5968234D27FB489B0078CA91 /* model */ = {
-			isa = PBXGroup;
-			children = (
-				5968235227FB49440078CA91 /* labelmap.txt */,
-				5968234E27FB48BE0078CA91 /* dcp_8-keypoints_1.0.2.tflite */,
-				5968234F27FB48BE0078CA91 /* ssd_mobilenet_v3_nails_quant.tflite */,
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
 		59BABB5F366AEDE6E96DDA9A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,7 +92,6 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				5968234D27FB489B0078CA91 /* model */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for DynamicMaskingLibrary */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -266,11 +249,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5968235327FB49440078CA91 /* labelmap.txt in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
-				5968235027FB48BE0078CA91 /* dcp_8-keypoints_1.0.2.tflite in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
-				5968235127FB48BE0078CA91 /* ssd_mobilenet_v3_nails_quant.tflite in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
