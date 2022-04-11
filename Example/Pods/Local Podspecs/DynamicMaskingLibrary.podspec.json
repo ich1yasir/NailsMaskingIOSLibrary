@@ -20,7 +20,9 @@
   },
   "source_files": "DynamicMaskingLibrary/Classes/**/*",
   "resource_bundles": {
-    "DynamicMaskingLibrary": "DynamicMaskingLibrary/Assets/**/*"
+    "DynamicMaskingLibrary": [
+      "DynamicMaskingLibrary/Assets/**/*"
+    ]
   },
   "public_header_files": "DynamicMaskingLibrary/Classes/**/*.h",
   "frameworks": "UIKit",

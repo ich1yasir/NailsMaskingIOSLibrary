@@ -43,7 +43,7 @@ TODO: Add long description of the pod here.
 #  }
 
 s.resource_bundles = {
-    'DynamicMaskingLibrary' => ['DynamicMaskingLibrary/Assets/**/*]
+    'DynamicMaskingLibrary' => ['DynamicMaskingLibrary/Assets/**/*']
 }
 
   
