@@ -6,8 +6,12 @@
 //  Copyright © 2021 Y Media Labs. All rights reserved.
 //
 
+#ifdef __cplusplus
+#undef NO
+#undef YES
 #import <opencv2/opencv.hpp>
 #import <opencv2/imgcodecs/ios.h>
+#endif
 #include <thread>
 #import "ImageProcessing.h"
 #import "SAMCubicSpline.h"
