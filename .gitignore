@@ -158,5 +158,7 @@ fastlane/test_output
 
 iOSInjectionProject/
 
-
-Example/Pods/
+# Need pod install
+Example/Pods/OpenCV/**/*.*
+Example/Pods/TensorFlowLiteC/**/*.*
+Example/Pods/TensorFlowLiteSwift/**/*.*
