@@ -41,12 +41,16 @@ TODO: Add long description of the pod here.
 #  s.resource_bundles = {
 #  ‘MyPodName’ => [‘MyPodName/Classes/**/*.js’]
 #  }
+  s.swift_version = '4.1'
 
-s.resource_bundles = {
+#  s.prefix_header_file = 'Example/Pods/Target Support Files/DynamicMaskingLibrary/DynamicMaskingLibrary-prefix.pch'
+  s.prefix_header_file = false
+
+  s.resource_bundles = {
     'DynamicMaskingLibrary' => ['DynamicMaskingLibrary/Assets/**/*']
-}
+  }
 
-  
+
   s.public_header_files = 'DynamicMaskingLibrary/Classes/**/*.h'
   s.frameworks = 'UIKit'
   
