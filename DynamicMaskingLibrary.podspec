@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DynamicMaskingLibrary'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'A short description of DynamicMaskingLibrary.'
 
 # This description is used to generate tags and improve search results.
@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/ich1yasir/DynamicMaskingLibrary'
+  s.homepage         = 'https://github.com/ich1yasir/NailsMaskingIOSLibrary'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'ich1yasir' => '43979098+ich1yasir@users.noreply.github.com' }
-  s.source           = { :git => 'https://github.com/ich1yasir/DynamicMaskingLibrary.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/ich1yasir/NailsMaskingIOSLibrary.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
