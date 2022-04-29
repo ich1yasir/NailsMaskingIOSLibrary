@@ -50,7 +50,7 @@ struct DCPInterference {
 
 /// Information about the MobileNet SSD model.
 enum MobilwTflite {
-  static let modelInfo: FileInfo = (name: "ssd_mobilenet_v3_nails_quant", extension: "tflite")
+  static let modelInfo: FileInfo = (name: "SSD_modelV4_640px_2000imgs", extension: "tflite")
   static let modelDCPInfo: FileInfo = (name: "dcp_8-keypoints_1.0.2", extension: "tflite")
   static let modelLandMark: FileInfo = (name: "hand_landmark", extension: "tflite")
   static let labelsInfo: FileInfo = (name: "labelmap", extension: "txt")
