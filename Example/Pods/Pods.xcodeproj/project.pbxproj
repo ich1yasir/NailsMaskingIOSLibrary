@@ -41,7 +41,7 @@
 		464FB670FAF3D9744580F164A28754F5 /* ModelBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D956623C089BBBB25DA300694855465 /* ModelBundle.swift */; };
 		4CBCF041B3212F52194E6DF2FCD4035C /* labelmap.txt in Resources */ = {isa = PBXBuildFile; fileRef = A7123A0F06A91A0AB2DC7D527E5550B2 /* labelmap.txt */; };
 		55EC3D17C08187A9C64DEE0D923FAC5A /* Pods-DynamicMaskingLibrary_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F24DED8243651050DEE6527AAC46224D /* Pods-DynamicMaskingLibrary_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		595561622807908800352923 /* SSD_modelV4_640px_2000imgs.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 595561612807908800352923 /* SSD_modelV4_640px_2000imgs.tflite */; };
+		595561622807908800352923 /* ssd_nails_V2_model_V5_xx_quant.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 595561612807908800352923 /* ssd_nails_V2_model_V5_xx_quant.tflite */; };
 		613A4BC79AC95F5E5FA92467D3D41F15 /* TensorFlowLiteSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8753FD2D7BFB3299C0F0AC2D24E0BF /* TensorFlowLiteSwift-dummy.m */; };
 		69F48462EDB10D8CB523B84C8348F65F /* Pods-DynamicMaskingLibrary_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1B40C15E02FE7C3412329E2397B242 /* Pods-DynamicMaskingLibrary_Example-dummy.m */; };
 		6ABFF71D3881D07BB55D8A7644FA4B8F /* models.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF0A270D70AAAD914E8F76E558E1829 /* models.m */; };
@@ -253,7 +253,7 @@
 		56BA6CB56B7A7D8154591ACCCA6EBBC8 /* opencl_svm_definitions.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = opencl_svm_definitions.hpp; path = opencv2.framework/Versions/A/Headers/core/opencl/runtime/opencl_svm_definitions.hpp; sourceTree = "<group>"; };
 		57C4455279DC7F66C83CE66E0011E486 /* constants_c.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = constants_c.h; path = opencv2.framework/Versions/A/Headers/imgcodecs/legacy/constants_c.h; sourceTree = "<group>"; };
 		58891DB4355602400FE9CEA16D0B41B6 /* mat.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = mat.hpp; path = opencv2.framework/Versions/A/Headers/gapi/own/mat.hpp; sourceTree = "<group>"; };
-		595561612807908800352923 /* SSD_modelV4_640px_2000imgs.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; name = SSD_modelV4_640px_2000imgs.tflite; path = DynamicMaskingLibrary/Assets/SSD_modelV4_640px_2000imgs.tflite; sourceTree = "<group>"; };
+		595561612807908800352923 /* ssd_nails_V2_model_V5_xx_quant.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; name = ssd_nails_V2_model_V5_xx_quant.tflite; path = DynamicMaskingLibrary/Assets/ssd_nails_V2_model_V5_xx_quant.tflite; sourceTree = "<group>"; };
 		5B6A082CE89030E1033F19A1BF628672 /* gopaque.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = gopaque.hpp; path = opencv2.framework/Versions/A/Headers/gapi/gopaque.hpp; sourceTree = "<group>"; };
 		5BB5EFAC80A8F44ADCC0CDA1F977E966 /* kmeans_index.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = kmeans_index.h; path = opencv2.framework/Versions/A/Headers/flann/kmeans_index.h; sourceTree = "<group>"; };
 		5C414A0B20A4AC510DEAE5C8AA0B61DF /* warpers.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = warpers.hpp; path = opencv2.framework/Versions/A/Headers/stitching/warpers.hpp; sourceTree = "<group>"; };
@@ -774,7 +774,7 @@
 				08E8691AE2F31297236CE8097E099BF3 /* dcp_8-keypoints_1.0.2.tflite */,
 				38323EC6F1F1AA9A4CD5ACD494628CFC /* Images */,
 				A7123A0F06A91A0AB2DC7D527E5550B2 /* labelmap.txt */,
-				595561612807908800352923 /* SSD_modelV4_640px_2000imgs.tflite */,
+				595561612807908800352923 /* ssd_nails_V2_model_V5_xx_quant.tflite */,
 				E58ADAD28AEC75F5B3C6EEA2F8D0A311 /* ImageHandler */,
 				DD70328B23CA74B8B011B0A53F5D364C /* ModelHandler */,
 				0A1A9B1026CFB65390E997A7754B3683 /* Pod */,
@@ -1314,7 +1314,7 @@
 			files = (
 				DCD0CA6AEA8E36225B429499B1145C56 /* dcp_8-keypoints_1.0.2.tflite in Resources */,
 				9BDA50572DFA3614281B04A7BB0DC686 /* Images in Resources */,
-				595561622807908800352923 /* SSD_modelV4_640px_2000imgs.tflite in Resources */,
+				595561622807908800352923 /* ssd_nails_V2_model_V5_xx_quant.tflite in Resources */,
 				4CBCF041B3212F52194E6DF2FCD4035C /* labelmap.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
