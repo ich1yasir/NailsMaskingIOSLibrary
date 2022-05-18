@@ -57,7 +57,7 @@ class DCPModelDataHandler {
 
   /// TensorFlow Lite `Interpreter` object for performing inference on a given model.
   private var interpreter: Interpreter
-  private var delegates: [Delegate]
+//  private var delegates: [Delegate]
 
   /// Information about the alpha component in RGBA data.
   private let alphaComponent = (baseOffset: 4, moduloRemainder: 3)
@@ -66,7 +66,7 @@ class DCPModelDataHandler {
 
   /// A failable initializer for `DCPModelDataHandler`. A new instance is created if the model is
   /// successfully loaded from the app's main bundle. Default `threadCount` is 4.
-  init?(modelFileInfo: FileInfo, threadCount: Int = 4) {
+  init?(modelFileInfo: FileInfo, delegates: [Delegate], threadCount: Int = 4) {
     let modelFilename = modelFileInfo.name
 
       guard let modelPath = ModelBundleClass.resourceBundle.path(
@@ -85,12 +85,12 @@ class DCPModelDataHandler {
 //      return nil
 //    }
     
-    var optionsDel = CoreMLDelegate.Options()
-    optionsDel.enabledDevices = .all
-    let coreMLDelegate = CoreMLDelegate(options: optionsDel)!
-      
-    // Specify the options for the `Interpreter`.
-    self.delegates = [coreMLDelegate]
+//    var optionsDel = CoreMLDelegate.Options()
+//    optionsDel.enabledDevices = .all
+//    let coreMLDelegate = CoreMLDelegate(options: optionsDel)!
+//
+//    // Specify the options for the `Interpreter`.
+//    self.delegates = [coreMLDelegate]
     self.threadCount = threadCount
     var options = Interpreter.Options()
     options.threadCount = threadCount

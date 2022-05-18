@@ -8,14 +8,17 @@
 
 import UIKit
 
+import TensorFlowLite
+
 public class DynamicMasking {
     
     private var modelSSDHandler: SSDDataHandler?
     private var modelDCPHandler: DCPModelDataHandler?
+    let delegates: [Delegate]
     
     // Holds the results at any time
     private var resultSSD: ResultSSD?
-    private var resultDCP: DCPInterference?
+//    private var resultDCP: DCPInterference?
     
     //Timings
     private var ssdTime = 0.0
@@ -24,8 +27,13 @@ public class DynamicMasking {
     private var inferenceTime = 0.0
     
     public init() {
-        modelSSDHandler = SSDDataHandler(modelFileInfo: MobilwTflite.modelInfo, labelsFileInfo: MobilwTflite.labelsInfo, threadCount: 4)
-        modelDCPHandler = DCPModelDataHandler(modelFileInfo: MobilwTflite.modelDCPInfo, threadCount: 4)
+        
+        let coreMLDelegate = CoreMLDelegate()!
+        
+        // Specify the options for the `Interpreter`.
+        self.delegates = [coreMLDelegate]
+        
+        self.modelSSDHandler = SSDDataHandler(modelFileInfo: MobilwTflite.modelInfo, labelsFileInfo: MobilwTflite.labelsInfo, delegates: self.delegates, threadCount: 4)
         
         guard modelSSDHandler != nil else {
           fatalError("Failed to load model")
@@ -43,23 +51,22 @@ public class DynamicMasking {
             fatalError()
         }
         
-        modelSSDHandler = SSDDataHandler(modelFileInfo: MobilwTflite.modelInfo, labelsFileInfo: MobilwTflite.labelsInfo, threadCount: threadCount)
-        
-        modelDCPHandler = DCPModelDataHandler(modelFileInfo: MobilwTflite.modelDCPInfo, threadCount: threadCount)
-        
         let orgsizeArr: [Float] = [Float((handImage?.size.width)!), Float((handImage?.size.height)!)];
         
         resultSSD = self.modelSSDHandler?.runModel(onFrame: pixelBuffer)
         
         
         var startDate = Date()
-        for bbox in (resultSSD!.inferences.boundingboxs as NSArray as! [NSArray]) {
-            // [ymin, xmin, ymax, xmax]
+        let arr = resultSSD!.inferences.boundingboxs as NSArray as! [NSArray]
+        let syncQueue = DispatchQueue(label: "...")
+        DispatchQueue.concurrentPerform(iterations: arr.count) { (index) in
+            let bbox = arr[index]
             let y = bbox.object(at: 0) as! Float * orgsizeArr[1]
             let x = bbox.object(at: 1) as! Float * orgsizeArr[0]
             let height_ = (bbox.object(at: 2) as! Float * orgsizeArr[1]) - y
             let width_ = (bbox.object(at: 3) as! Float * orgsizeArr[0]) - x
             
+            let modelDCPHandler_ = DCPModelDataHandler(modelFileInfo: MobilwTflite.modelDCPInfo,delegates: self.delegates, threadCount: 4)
             
             let Rect = CGRect(x: CGFloat(x), y: CGFloat(y), width: CGFloat(width_), height: CGFloat(height_))
             
@@ -69,10 +76,12 @@ public class DynamicMasking {
                 fatalError()
             }
             
-            resultDCP = self.modelDCPHandler?.runModel(onFrame: pixbuffer)
-            resultSSD?.inferences.resultDCP.add(resultDCP!.keypoints)
-            
+            let resultDCP_ = modelDCPHandler_?.runModel(onFrame: pixbuffer)
+            syncQueue.sync { // Needed when accessing a variable from many threads
+                resultSSD?.inferences.resultDCP.add(resultDCP_!.keypoints)
+            }
         }
+        
         let intervalDCP = Date().timeIntervalSince(startDate) * 1000
         
         guard let tempSSDResult = resultSSD else {

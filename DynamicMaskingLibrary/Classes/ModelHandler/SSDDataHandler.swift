@@ -26,7 +26,7 @@ class SSDDataHandler: NSObject {
     let inputChannels = 3
     let inputWidth = 640
     let inputHeight = 640
-    let delegates: [Delegate]
+//    let delegates: [Delegate]
 
     // image mean and std for floating model, should be consistent with parameters used in model training
     let imageMean: Float = 127.5
@@ -49,7 +49,7 @@ class SSDDataHandler: NSObject {
 
     /// A failable initializer for `ModelDataHandler`. A new instance is created if the model and
     /// labels files are successfully loaded from the app's main bundle. Default `threadCount` is 1.
-    init?(modelFileInfo: FileInfo, labelsFileInfo: FileInfo, threadCount: Int = 1) {
+    init?(modelFileInfo: FileInfo, labelsFileInfo: FileInfo, delegates: [Delegate], threadCount: Int = 1) {
       let modelFilename = modelFileInfo.name
       let modelExt = modelFileInfo.extension
         
@@ -69,18 +69,18 @@ class SSDDataHandler: NSObject {
 //        print("Failed to load the model file with name: \(modelFilename).")
 //        return nil
 //      }
-      var optionsDel = CoreMLDelegate.Options()
-      optionsDel.enabledDevices = .all
-      let coreMLDelegate = CoreMLDelegate(options: optionsDel)!
-      
-      // Specify the options for the `Interpreter`.
-      self.delegates = [coreMLDelegate]
+//      var optionsDel = CoreMLDelegate.Options()
+//      optionsDel.enabledDevices = .all
+//      let coreMLDelegate = CoreMLDelegate(options: optionsDel)!
+//
+//      // Specify the options for the `Interpreter`.
+//      self.delegates = [coreMLDelegate]
       self.threadCount = threadCount
       var options = Interpreter.Options()
       options.threadCount = threadCount
       do {
         // Create the `Interpreter`.
-        interpreter = try Interpreter(modelPath: modelPath, options: options, delegates: self.delegates)
+        interpreter = try Interpreter(modelPath: modelPath, options: options, delegates: delegates)
         
         // Allocate memory for the model's input `Tensor`s.
         try interpreter.allocateTensors()
