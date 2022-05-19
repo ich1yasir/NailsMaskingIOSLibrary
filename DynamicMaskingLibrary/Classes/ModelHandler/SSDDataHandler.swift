@@ -19,7 +19,7 @@ class SSDDataHandler: NSObject {
     let threadCount: Int
     let threadCountLimit = 10
 
-    let threshold: Float = 0.5
+    let threshold: Float = 0.3
 
     // MARK: Model parameters
     let batchSize = 1
@@ -144,11 +144,19 @@ class SSDDataHandler: NSObject {
         try interpreter.invoke()
         interval = Date().timeIntervalSince(startDate) * 1000
 
-        outputBoundingBox = try interpreter.output(at: 0)
-        outputClasses = try interpreter.output(at: 1)
-        outputScores = try interpreter.output(at: 2)
-        outputCount = try interpreter.output(at: 3)
+//        outputBoundingBox = try interpreter.output(at: 0)
+//        outputClasses = try interpreter.output(at: 1)
+//        outputScores = try interpreter.output(at: 2)
+//        outputCount = try interpreter.output(at: 3)
           
+          outputBoundingBox = try interpreter.output(at: 1)
+          outputClasses = try interpreter.output(at: 3)
+          outputScores = try interpreter.output(at: 0)
+          outputCount = try interpreter.output(at: 2)
+//          # 0 # to be score
+//          # 1 # to be Boxes
+//          # 2 # to be num_det
+//          # 3 # to be Lebel
       } catch let error {
         print("Failed to invoke the interpreter with error: \(error.localizedDescription)")
         return nil

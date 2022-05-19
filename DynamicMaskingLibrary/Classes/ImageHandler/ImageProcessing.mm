@@ -232,6 +232,8 @@ void _drawBoxLine(Mat imageOrg, NSMutableArray *boxespreds, NSMutableArray *nail
     std::vector<std::thread> threads;
     int height = image.rows;
     int width = image.cols;
+    
+    dispatch_group_t group = dispatch_group_create();
     for(int i = 0; i < boxespreds.count; i++)
     {
         NSArray *bs = [boxespreds objectAtIndex:i];
