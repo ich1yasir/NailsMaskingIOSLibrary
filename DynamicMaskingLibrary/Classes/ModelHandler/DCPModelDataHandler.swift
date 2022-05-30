@@ -66,7 +66,7 @@ class DCPModelDataHandler {
 
   /// A failable initializer for `DCPModelDataHandler`. A new instance is created if the model is
   /// successfully loaded from the app's main bundle. Default `threadCount` is 4.
-  init?(modelFileInfo: FileInfo, delegates: [Delegate], threadCount: Int = 4) {
+  init?(modelFileInfo: FileInfo, threadCount: Int = 4) {
     let modelFilename = modelFileInfo.name
 
       guard let modelPath = ModelBundleClass.resourceBundle.path(
@@ -97,9 +97,17 @@ class DCPModelDataHandler {
     
     do {
       // Create the `Interpreter`.
-      interpreter = try Interpreter(modelPath: modelPath, options: options)
+        let Delegates = MetalDelegate()
+
+        // Core ML delegate will only be created for devices with Neural Engine
+        interpreter = try Interpreter(modelPath: modelPath, options: options, delegates: [Delegates])
+        try interpreter.allocateTensors()
+              // Run inference ...
+        
+        
+      //interpreter = try Interpreter(modelPath: modelPath, options: options)
       // Allocate memory for the model's input `Tensor`s.
-      try interpreter.allocateTensors()
+      
     } catch let error {
       print("Failed to create the interpreter with error: \(error.localizedDescription)")
       return nil

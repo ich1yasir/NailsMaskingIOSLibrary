@@ -49,7 +49,7 @@ class SSDDataHandler: NSObject {
 
     /// A failable initializer for `ModelDataHandler`. A new instance is created if the model and
     /// labels files are successfully loaded from the app's main bundle. Default `threadCount` is 1.
-    init?(modelFileInfo: FileInfo, labelsFileInfo: FileInfo, delegates: [Delegate], threadCount: Int = 1) {
+    init?(modelFileInfo: FileInfo, labelsFileInfo: FileInfo, threadCount: Int = 1) {
       let modelFilename = modelFileInfo.name
       let modelExt = modelFileInfo.extension
         
@@ -79,8 +79,17 @@ class SSDDataHandler: NSObject {
       var options = Interpreter.Options()
       options.threadCount = threadCount
       do {
-        // Create the `Interpreter`.
-        interpreter = try Interpreter(modelPath: modelPath, options: options, delegates: delegates)
+          let coreMLDelegate = CoreMLDelegate()
+
+          // Core ML delegate will only be created for devices with Neural Engine
+          if coreMLDelegate != nil {
+            interpreter = try Interpreter(modelPath: modelPath,options: options,
+                                          delegates: [coreMLDelegate!])
+          } else {
+            interpreter = try Interpreter(modelPath: modelPath, options: options)
+          }
+//        // Create the `Interpreter`.
+//        interpreter = try Interpreter(modelPath: modelPath, options: options, delegates: delegates)
         
         // Allocate memory for the model's input `Tensor`s.
         try interpreter.allocateTensors()

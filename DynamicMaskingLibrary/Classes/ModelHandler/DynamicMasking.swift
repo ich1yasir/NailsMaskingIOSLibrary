@@ -14,7 +14,6 @@ public class DynamicMasking {
     
     private var modelSSDHandler: SSDDataHandler?
     private var modelDCPHandler: DCPModelDataHandler?
-    let delegates: [Delegate]
     
     // Holds the results at any time
     private var resultSSD: ResultSSD?
@@ -28,12 +27,7 @@ public class DynamicMasking {
     
     public init() {
         
-        let coreMLDelegate = CoreMLDelegate()!
-        
-        // Specify the options for the `Interpreter`.
-        self.delegates = [coreMLDelegate]
-        
-        self.modelSSDHandler = SSDDataHandler(modelFileInfo: MobilwTflite.modelInfo, labelsFileInfo: MobilwTflite.labelsInfo, delegates: self.delegates, threadCount: 4)
+        self.modelSSDHandler = SSDDataHandler(modelFileInfo: MobilwTflite.modelInfo, labelsFileInfo: MobilwTflite.labelsInfo, threadCount: 4)
         
         guard modelSSDHandler != nil else {
           fatalError("Failed to load model")
@@ -66,7 +60,7 @@ public class DynamicMasking {
             let height_ = (bbox.object(at: 2) as! Float * orgsizeArr[1]) - y
             let width_ = (bbox.object(at: 3) as! Float * orgsizeArr[0]) - x
             
-            let modelDCPHandler_ = DCPModelDataHandler(modelFileInfo: MobilwTflite.modelDCPInfo,delegates: self.delegates, threadCount: 4)
+            let modelDCPHandler_ = DCPModelDataHandler(modelFileInfo: MobilwTflite.modelDCPInfo, threadCount: 4)
             
             let Rect = CGRect(x: CGFloat(x), y: CGFloat(y), width: CGFloat(width_), height: CGFloat(height_))
             
