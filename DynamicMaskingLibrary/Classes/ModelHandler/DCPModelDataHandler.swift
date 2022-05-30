@@ -96,10 +96,11 @@ class DCPModelDataHandler {
     options.threadCount = threadCount
     
     do {
-      // Create the `Interpreter`.
-      interpreter = try Interpreter(modelPath: modelPath, options: options)
-      // Allocate memory for the model's input `Tensor`s.
-      try interpreter.allocateTensors()
+        let Delegates = MetalDelegate()
+        
+        // Core ML delegate will only be created for devices with Neural Engine
+        interpreter = try Interpreter(modelPath: modelPath, options: options, delegates: [Delegates])
+        try interpreter.allocateTensors()
     } catch let error {
       print("Failed to create the interpreter with error: \(error.localizedDescription)")
       return nil

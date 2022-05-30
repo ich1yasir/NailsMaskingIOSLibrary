@@ -61,5 +61,6 @@ TODO: Add long description of the pod here.
   # s.dependency 'AFNetworking', '~> 2.3'
   s.dependency 'TensorFlowLiteSwift', '2.7.0'
   s.dependency 'TensorFlowLiteSwift/CoreML', '2.7.0'
+  s.dependency 'TensorFlowLiteSwift/Metal', '2.7.0'
   s.dependency 'OpenCV', '~> 4.3.0'
 end

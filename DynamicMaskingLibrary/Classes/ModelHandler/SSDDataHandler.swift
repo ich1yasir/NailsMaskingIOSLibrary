@@ -26,7 +26,7 @@ class SSDDataHandler: NSObject {
     let inputChannels = 3
     let inputWidth = 640
     let inputHeight = 640
-    let delegates: [Delegate]
+//    let delegates: [Delegate]
 
     // image mean and std for floating model, should be consistent with parameters used in model training
     let imageMean: Float = 127.5
@@ -69,18 +69,22 @@ class SSDDataHandler: NSObject {
 //        print("Failed to load the model file with name: \(modelFilename).")
 //        return nil
 //      }
-      var optionsDel = CoreMLDelegate.Options()
-      optionsDel.enabledDevices = .all
-      let coreMLDelegate = CoreMLDelegate(options: optionsDel)!
-      
-      // Specify the options for the `Interpreter`.
-      self.delegates = [coreMLDelegate]
+        
       self.threadCount = threadCount
       var options = Interpreter.Options()
       options.threadCount = threadCount
       do {
-        // Create the `Interpreter`.
-        interpreter = try Interpreter(modelPath: modelPath, options: options, delegates: self.delegates)
+          let coreMLDelegate = CoreMLDelegate()
+
+          // Core ML delegate will only be created for devices with Neural Engine
+          if coreMLDelegate != nil {
+            interpreter = try Interpreter(modelPath: modelPath,options: options,
+                                          delegates: [coreMLDelegate!])
+          } else {
+            interpreter = try Interpreter(modelPath: modelPath, options: options)
+          }
+//        // Create the `Interpreter`.
+//        interpreter = try Interpreter(modelPath: modelPath, options: options, delegates: delegates)
         
         // Allocate memory for the model's input `Tensor`s.
         try interpreter.allocateTensors()
@@ -88,8 +92,8 @@ class SSDDataHandler: NSObject {
         print("Failed to create the interpreter with error: \(error.localizedDescription)")
         return nil
       }
-
-      super.init()
+      
+     super.init()
 
       // Load the classes listed in the labels file.
       // loadLabels(fileInfo: labelsFileInfo)

@@ -1,9 +1,9 @@
 {
   "name": "DynamicMaskingLibrary",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "summary": "A short description of DynamicMaskingLibrary.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/ich1yasir/DynamicMaskingLibrary",
+  "homepage": "https://github.com/ich1yasir/NailsMaskingIOSLibrary",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,8 +12,8 @@
     "ich1yasir": "43979098+ich1yasir@users.noreply.github.com"
   },
   "source": {
-    "git": "https://github.com/ich1yasir/DynamicMaskingLibrary.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/ich1yasir/NailsMaskingIOSLibrary.git",
+    "tag": "1.0.1"
   },
   "platforms": {
     "ios": "9.0"
@@ -24,6 +24,8 @@
       "DynamicMaskingLibrary/Assets/**/*"
     ]
   },
+  "swift_versions": "4.1",
+  "prefix_header_file": false,
   "public_header_files": "DynamicMaskingLibrary/Classes/**/*.h",
   "frameworks": "UIKit",
   "static_framework": true,
@@ -34,8 +36,12 @@
     "TensorFlowLiteSwift/CoreML": [
       "2.7.0"
     ],
+    "TensorFlowLiteSwift/Metal": [
+      "2.7.0"
+    ],
     "OpenCV": [
       "~> 4.3.0"
     ]
-  }
+  },
+  "swift_version": "4.1"
 }
